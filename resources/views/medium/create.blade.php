@@ -20,8 +20,14 @@
 
               <div class="form-group">
                 <label for="description">@lang('Description')</label>
-                <textarea name="description" class="form-control {{ $errors->has('title') ? 'is-invalid' : '' }}" rows="5"></textarea>
-                <div class="invalid-feedback">{{ $errors->first('title') }}</div>
+                <textarea name="description" class="form-control {{ $errors->has('description') ? 'is-invalid' : '' }}" rows="5"></textarea>
+                <div class="invalid-feedback">{{ $errors->first('description') }}</div>
+              </div>
+
+              <div class="form-group">
+                <label for="pdf">@lang('Image Cover')</label>
+                <input name="image" type="file" class="form-control-file is-invalid">
+                <div class="invalid-feedback">{{ $errors->first('image') }}</div>
               </div>
 
               <div class="form-group">

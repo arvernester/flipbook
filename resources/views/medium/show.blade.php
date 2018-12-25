@@ -32,10 +32,11 @@
 		$(function(){
 
 			var bookOptions = {
-        pdf: '{{ url(\Storage::url($medium->path)) }}',
+        		pdf: '{{ $medium->full_path }}',
 				height   : 500,
 				width    : 1000,
 				maxHeight : 600,
+				container: 'window',
 
 				centeredWhenClosed : true,
 				hardcovers : true,
@@ -44,7 +45,8 @@
 				responsiveHandleWidth : 50,
 
 				container: window,
-				containerPadding: "20px"
+				containerPadding: "20px",
+				toc: {!! json_encode($pages) !!}
 			};
 
 			$('#book').wowBook( bookOptions );

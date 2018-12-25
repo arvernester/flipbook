@@ -19,7 +19,8 @@ class CreateMediaTable extends Migration
             $table->uuid('guid')->unique();
             $table->string('title');
             $table->text('description');
-            $table->string('disk');
+            $table->string('image_path');
+            $table->string('disk', 50)->default('public');
             $table->string('path');
             $table->text('metadata');
             $table->timestamps();

@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('media/pages/{medium}', 'MediumController@pages');
 Route::resource('media', 'MediumController');
